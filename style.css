@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.animatie {
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 40px 80px;
+    border: solid 3px black;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*===========================================================
+ANIMATIE 1
+============================================================*/
+
+.animatie1 a:before {
+    content: 'Hover Me';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    z-index: -1;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    transform: scale(1.3);
+    opacity: 0;
+}
+
+.animatie1 a:hover:before {
+    transform: scale(1);
+    font-size: 45px;
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/*===================================================
+ANIMATIE 2
+===================================================*/
+
+.animatie2 a {
+    color: tomato;
+    border-color: tomato;
+    text-transform: uppercase;
+}
+
+.animatie2 a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    border-radius: 2.8em/1.6em;
+    transform: translateY(70px) rotateX(91deg);
+    transition: 0.6s;
+    z-index: -1;
+}
+
+.animatie2 a:hover {
+    color: white;
+    transition-delay: 0.2s;
+}
+
+.animatie2 a:hover::before {
+    transform: scale(1.31) rotateX(0deg);
+}
+
+
+/*====================================================
+ANIMATIE 3
+====================================================*/
+
+.animatie3 {
+    background-color: #262626;
+}
+
+.animatie3 a {
+    background-color: rgb(255, 238, 0);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    overflow: visible;
+}
+
+.animatie3 a:before {
+    content: 'button';
+    position: absolute;
+    background-color: teal;
+    width: 100%;
+    min-width: 345.19px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top;
+    z-index: -1;
+    transition: .7s;
+}
+
+.animatie3 a:after {
+    content: 'button';
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    min-width: 345.19px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom;
+    z-index: -1;
+    transition: .6s;
+    transition-delay: .3s;
+}
+
+.animatie3 a:hover:before,
+.animatie3 a:hover:after {
+    transform: rotateX(-360deg);
+    z-index: 1;
+}
+
+
+/*=========================================================
+ANIMATIE 4
+=========================================================*/
+
+.animatie4 {
+    background-color: grey;
+}
+
+.animatie4 a {
+    background-color: grey;
+    border: solid 3px rgb(255, 238, 0);
+    color: grey;
+    text-transform: uppercase;
+    overflow: visible;
+}
+
+.animatie4 a:before {
+    content: 'button';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    color: rgb(255, 238, 0);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.animatie4 a:hover:before {
+    transform: rotateY(720deg) scale(0) translateX(1000px);
+    opacity: 0;
+}
