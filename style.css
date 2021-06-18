@@ -188,3 +188,164 @@ ANIMATIE 4
     transform: rotateY(720deg) scale(0) translateX(1000px);
     opacity: 0;
 }
+
+
+/*==================================================
+ANIMATIE 5
+==================================================*/
+
+.animatie5 {
+    background-color: #262626;
+}
+
+.animatie5 a {
+    color: yellow;
+    border: none;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    transition: color .5s ease-in-out;
+    z-index: 1;
+}
+
+.animatie5 a span {
+    transform: scale(0);
+    transition: .5s;
+    background-color: yellow;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: .5em;
+    z-index: -1;
+}
+
+.animatie5 a:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    top: 50.25px;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 65px 0px 1px yellow;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.animatie5 a:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    top: 50.25px;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: -65px 0px 1px yellow;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.animatie5 a:hover:before {
+    opacity: 1;
+    transform: translateX(113px);
+}
+
+.animatie5 a:hover:after {
+    opacity: 1;
+    transform: translateX(-87px);
+}
+
+.animatie5 a:hover span {
+    transform: scale(1);
+    transition-delay: .5s;
+}
+
+.animatie5 a:hover {
+    color: #262626;
+    transition-delay: .5s;
+}
+
+
+/*==========================================================
+ANIMATIE 6
+==========================================================*/
+
+.animatie6 {
+    background-color: #262626;
+}
+
+.animatie6 a {
+    border: none;
+    color: rgb(255, 196, 0);
+    position: relative;
+    overflow: visible;
+    z-index: 50;
+}
+
+.animatie6 a:before {
+    content: '';
+    position: absolute;
+    width: 117%;
+    height: 2%;
+    background-color: red;
+    top: 0;
+    left: -30px;
+    z-index: 1;
+    transition: transform .5s;
+}
+
+.animatie6 a:after {
+    content: '';
+    position: absolute;
+    width: 117%;
+    height: 3%;
+    background-color: rgb(255, 196, 0);
+    bottom: 0;
+    left: -30px;
+    transition: transform .5s;
+}
+
+.animatie6 a span {
+    content: '';
+    position: absolute;
+    width: 1%;
+    height: 135%;
+    transition: transform .5s;
+}
+
+.animatie6 a .spanRed {
+    top: -20px;
+    left: 0;
+    background-color: red;
+}
+
+.animatie6 a .spanYellow {
+    right: 0;
+    top: -20px;
+    background-color: rgb(255, 196, 0);
+}
+
+.animatie6 a:hover:before {
+    transform: translateY(129px);
+}
+
+.animatie6 a:hover:after {
+    transform: translateY(-129px);
+}
+
+.animatie6 a:hover .spanRed {
+    transform: translateX(352px);
+}
+
+.animatie6 a:hover .spanYellow {
+    transform: translateX(-352px);
+}
