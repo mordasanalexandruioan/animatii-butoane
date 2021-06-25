@@ -554,3 +554,80 @@ ANIMATIE 9
 .animatie9 a:hover {
     color: white;
 }
+
+
+/*====================================================================
+ANIMATIE 10
+===================================================================*/
+
+.animatie10 {
+    perspective: 800px;
+}
+
+.animatie10 a {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: .25em;
+    font-size: 1.9rem;
+    border: none;
+    z-index: 1;
+    color: #ffff;
+    overflow: visible;
+    transition: color .1s;
+    transform-style: preserve-3d;
+}
+
+.animatie10 a span {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(89, 98, 119);
+    top: 0;
+    left: 0;
+    transition: transform .1s;
+}
+
+.animatie10 a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101.8%;
+    height: 110%;
+    background-color: rgb(85, 191, 254);
+    z-index: -1;
+    transform: translate(-.4em, -.4em);
+    transition: transform .2s;
+    transform-origin: top;
+}
+
+.animatie10 a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101.8%;
+    height: 110%;
+    background-color: rgb(250, 137, 120);
+    z-index: -2;
+    transition: transform .2s;
+    transform-origin: bottom;
+}
+
+.animatie10 a:hover {
+    color: black;
+}
+
+.animatie10 a:hover:before {
+    transform: rotateX(75deg);
+}
+
+.animatie10 a:hover:after {
+    transform: rotateX(-75deg);
+}
+
+.animatie10 a:hover span {
+    transform: rotateX(90deg);
+}
